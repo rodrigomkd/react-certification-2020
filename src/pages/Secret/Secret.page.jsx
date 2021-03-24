@@ -2,10 +2,9 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 
 function SecretPage() {
-  return (  
+  return (
     <section>
       <pre>
-        Welcome to the Challenge!
         welcome, voyager...
         <Link to="/"> ← go back</Link>
       </pre>
