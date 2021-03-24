@@ -1,8 +1,10 @@
-.homepage {
-  text-align: center;
+div.cards {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.homepage h1 {
-  font-size: 3rem;
-  letter-spacing: -2px;
+.title {
+  text-align: center;
 }

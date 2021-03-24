@@ -1,0 +1,24 @@
+.card-item > h1 {
+  font-size: 14px;
+	font-weight: 800;
+	color: #444;
+	padding: 0px;
+	display: block;
+}
+
+div.card-item {
+  height: 380px;
+  width: 320px;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+  margin: 10px;
+}
+
+.description {
+  color: #888;
+	font-size: 12px;
+	font-style: regular;
+	margin: 0;
+	padding: 0 0px;
+}
