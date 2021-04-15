@@ -7,7 +7,7 @@ const VideoItem = ({ title, description, videoSrc }) => {
       <div className="container-video">
           <iframe className="frame" src={videoSrc} title={title} />
           <h2>{title}</h2>
-          <p>{description}</p>
+          <div className="description-video">{description}</div>
       </div>
   );
 };

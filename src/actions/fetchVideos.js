@@ -25,7 +25,10 @@ const fetchVideos = (search) => {
           ).then(response => {
             dispatch(fetchVideosList(response.data.items.filter(item => (item.id.kind == 'youtube#video'))));
           }           
-        );
+        ).catch(error => {
+          console.log("entra a error: " + error);
+          dispatch(fetchVideosList([]));
+        });
     }
   }
 
