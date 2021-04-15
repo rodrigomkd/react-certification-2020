@@ -1,0 +1,45 @@
+.video-item {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  display: flex;
+}
+
+.container-video {
+  width: 100%;
+  height: auto;
+}
+
+.frame {
+  height: 500px;
+  width: 90%;
+}
+
+h2 {
+  display: block;
+  font-size: 1.3em;
+  margin-block-start: 10px;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  margin-left: 16px;
+}
+
+.description-video {
+  padding-left: 16px;
+  font-size: 0.775rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+}
+
+.description-video-dark {
+  padding-left: 16px;
+  font-size: 0.775rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+}
