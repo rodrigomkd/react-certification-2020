@@ -41,9 +41,9 @@ function App() {
             <Route exact path="/login">
               <LoginPage />
             </Route>
-            <Route exact path="/favorites">
+            <Private exact path="/favorites">
               <FavoritePage theme={themeReducer.mode} />
-            </Route>
+            </Private>
             <Private exact path="/favorites/:id">
               <FavoriteVideoPage theme={themeReducer.mode} />
             </Private>
