@@ -1,0 +1,11 @@
+.video-column {
+    cursor: pointer;
+    border-bottom-color: black;
+    border-bottom-style: solid;
+    border-bottom-width: 1px;
+    border-right-color: black;
+    border-right-style: solid;
+    border-right-width: 1px;
+    padding: 0;
+    margin: 0;
+}
