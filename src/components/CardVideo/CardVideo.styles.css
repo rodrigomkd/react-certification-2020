@@ -1,9 +1,27 @@
 .card-item > h1 {
-  font-size: 14px;
-	font-weight: 800;
-	color: #444;
-	padding: 0px;
+	color: #1f1f1f;
+	padding-left: 16px;
+  padding-right: 16px;
 	display: block;
+
+  font-size: 1.1rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.0075em;
+}
+
+.card-item-dark > h1 {
+	color: #fff;
+	padding-left: 16px;
+  padding-right: 16px;
+	display: block;
+
+  font-size: 1.1rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 500;
+  line-height: 1.6;
+  letter-spacing: 0.0075em;
 }
 
 div.card-item {
@@ -15,10 +33,31 @@ div.card-item {
   margin: 10px;
 }
 
+div.card-item-dark {
+  height: 380px;
+  width: 320px;
+  background-color: #424242;
+  border-radius: 5px;
+  border: 1px solid #1f1f1f;
+  margin: 16px;
+}
+
 .description {
-  color: #888;
-	font-size: 12px;
-	font-style: regular;
-	margin: 0;
-	padding: 0 0px;
+  color: #888;;
+  padding-left: 16px;
+  font-size: 0.775rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
+}
+
+.description-dark {
+  color: #ddd;
+  padding-left: 16px;
+  font-size: 0.775rem;
+  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-weight: 400;
+  line-height: 1.43;
+  letter-spacing: 0.01071em;
 }

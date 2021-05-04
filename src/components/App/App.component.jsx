@@ -1,4 +1,4 @@
-import React, { useLayoutEffect } from 'react';
+import React from 'react';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 
 import AuthProvider from '../../providers/Auth';
@@ -11,42 +11,26 @@ import Private from '../Private';
 import Fortune from '../Fortune';
 import Layout from '../Layout';
 import Header from '../Header';
-import { random } from '../../utils/fns';
-import {Provider} from 'react-redux';
-import store from '../../store/store';
+import { useSelector } from 'react-redux';
+
 
 function App() {
+  const themeReducer = useSelector((state) => state.themeReducer);
+  
+  const themeStyle = `
+    background-color: ${ themeReducer.mode == 'dark' ? '#303030;' : 'white;' }
+    color: ${ themeReducer.mode == 'dark' ? '#fff' : '#1f1f1f' };
+  `;
 
-  useLayoutEffect(() => {
-    const { body } = document;
-
-    function rotateBackground() {
-      const xPercent = random(100);
-      const yPercent = random(100);
-      body.style.setProperty('--bg-position', `${xPercent}% ${yPercent}%`);
-    }
-
-    const intervalId = setInterval(rotateBackground, 3000);
-    body.addEventListener('click', rotateBackground);
-
-    return () => {
-      clearInterval(intervalId);
-      body.removeEventListener('click', rotateBackground);
-    };
-  }, []);
+  const { body } = document;
+  body.style = themeStyle;
 
   return (
-
-    <Provider store={store}>
+    
     <BrowserRouter>   
     <Header />
    
     <AuthProvider>     
-
-    <BrowserRouter>
-    <Header />
-      <AuthProvider>   
-
         <Layout>        
           <Switch>
             <Route exact path="/">
@@ -55,9 +39,9 @@ function App() {
             <Route exact path="/login">
               <LoginPage />
             </Route>
-            <Private path="/:id">
+            <Route path="/:id">
               <VideoPage />
-            </Private>
+            </Route>
             <Private exact path="/secret">
               <SecretPage />
             </Private>
@@ -69,7 +53,7 @@ function App() {
         </Layout>
       </AuthProvider>
     </BrowserRouter>
-     </Provider>
+  
   );
 }
 
