@@ -1,0 +1,129 @@
+.headerMenu {
+  width: 100vw;
+  min-height: 60px;
+  background-color: #1c5476;
+  padding: 15px 18px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+.headerWrapper {
+  display: flex;
+}
+
+.headerToggleWrapper {
+  display: inline-flex;
+  margin-right: 25px;
+}
+
+.headerToggleLabel {
+  margin-left: 8px;
+  font-size: 14px;
+  line-height: 30px;
+}
+
+.headerToggle {
+  margin-right: 1rem;
+  position: relative;
+  width: 80px;
+  height: 30px;
+  margin: 0px;
+  appearance: none;
+  -webkit-appearance: none;
+  background-size: cover;
+  background-repeat: no-repeat;
+  border-radius: 25px;
+  box-shadow: inset 0px 0px 2px rgba(255, 255, 255, .7);
+  transition: background-image .7s ease-in-out;
+  outline: none;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.headerToggle:checked {
+  background-size: cover;
+  transition: background-image 1s ease-in-out;
+}
+
+.headerToggle:after {
+  content: '';
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background-color: #fafafa;
+  position: absolute;
+  left: 3px;
+  top: 2px;
+  transform: translateX(0px);
+  animation: off .7s forwards cubic-bezier(.8, .5, .2, 1.4);
+  box-shadow: inset 5px -5px 4px rgba(53, 53, 53, 0.3);
+}
+
+@keyframes off {
+  0% {
+    transform: translateX(80px);
+    width: 26px;
+  }
+
+  50% {
+    width: 45px;
+    border-radius: 25px;
+  }
+
+  100% {
+    transform: translateX(0px);
+    width: 26px;
+  }
+}
+
+.headerToggle:checked:after {
+  background-color: #74a44a;
+  animation: on .7s forwards cubic-bezier(.8, .5, .2, 1.4);
+  box-shadow: inset -5px -5px 4px rgba(53, 53, 53, 0.3);
+  left: -29px;
+}
+
+@keyframes on {
+  0% {
+    transform: translateX(0px);
+    width: 26px;
+  }
+
+  50% {
+    width: 45px;
+    border-radius: 25px;
+  }
+
+  100% {
+    transform: translateX(80px);
+    width: 26px;
+  }
+}
+
+.menuIcon {
+  background-image: url("./img/menu_icon.png");
+  width: 35px;
+  height: 35px;
+  display: block;
+  background-size: 35px;
+  margin-right: 15px;
+}
+
+.loginIcon {
+  background-image: url("./img/user_icon.png");
+  width: 35px;
+  height: 35px;
+  display: block;
+  background-size: 30px;
+  background-repeat: no-repeat;
+}
+
+.searchIcon {
+  background-image: url("./img/search_icon.png");
+  width: 35px;
+  height: 35px;
+  display: block;
+  background-size: 30px;
+  background-repeat: no-repeat;
+}
