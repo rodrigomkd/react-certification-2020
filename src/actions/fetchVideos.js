@@ -1,8 +1,7 @@
 import axios from "axios";
 import {
-    YOUTUBE_API_KEY,
     YOUTUBE_BASE_URL
-  } from "../constants/api";
+  } from "../utils/constants";
 
 export const fetchVideosList = (items) => {
     return {
@@ -12,20 +11,24 @@ export const fetchVideosList = (items) => {
 }
 
 const fetchVideos = (search) => {
+  console.log("enva: " + process.env.REACT_APP_YOUTUBE_KEY);
     return (dispatch) => {
         axios.get(
             `${YOUTUBE_BASE_URL}/search`, {
                 params: {
                     part: "snippet",
                     maxResults: 24,
-                    key: YOUTUBE_API_KEY,
+                    key: process.env.REACT_APP_YOUTUBE_KEY,
                     q: search
                 }
             }
           ).then(response => {
             dispatch(fetchVideosList(response.data.items.filter(item => (item.id.kind == 'youtube#video'))));
           }           
-        );
+        ).catch(error => {
+          console.error(error);
+          dispatch(fetchVideosList([]));
+        });
     }
   }
 
