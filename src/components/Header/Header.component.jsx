@@ -11,6 +11,7 @@ function Header() {
           <input type="text" id="name" placeholder="Search...">
           </input>
         </div>
+
         <div className="headerWrapper">
           <div className="headerToggleWrapper">
             <input type="checkbox" name="darkMode" className="headerToggle" id="darkMode"/>
@@ -20,7 +21,7 @@ function Header() {
         </div>
       </header>
     );
-  
+
 }
 
 export default Header;

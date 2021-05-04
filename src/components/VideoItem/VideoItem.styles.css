@@ -1,0 +1,43 @@
+.video-item {
+  padding-top: 12px;
+  padding-bottom: 12px;
+  display: flex;
+}
+
+.title {
+  text-transform: capitalize;
+  color: #484848;
+  line-height: 1.2;
+  font-weight: normal;
+  padding-left: 12px;
+  text-align: left;
+}
+
+.container-video {
+  width: 100%;
+  height: auto;
+}
+
+.frame {
+  height: 500px;
+  width: 90%;
+}
+
+h2 {
+  display: block;
+  font-size: 1.5em;
+  margin-block-start: 10px;
+  margin-block-end: 0.83em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+p {
+  display: block;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  color: #484848;
+}

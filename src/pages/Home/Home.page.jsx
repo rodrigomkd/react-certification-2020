@@ -3,6 +3,8 @@ import { Link, useHistory } from 'react-router-dom';
 
 import { useAuth } from '../../providers/Auth';
 import './Home.styles.css';
+import VideoList from '../../components/VideoList';
+
 import mockedData from '../../mock/youtube-videos-mock.json';
 import CardVideo from '../../components/CardVideo';
 
@@ -23,6 +25,7 @@ function HomePage() {
       {authenticated ? (
         
         <>
+        <VideoList />
         <div className="cards">
         {mockedData.items.map((item, index) => (
           <CardVideo key={index}
