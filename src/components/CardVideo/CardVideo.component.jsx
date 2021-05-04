@@ -3,13 +3,15 @@ import React from 'react';
 import './CardVideo.styles.css';
 import { useHistory } from 'react-router-dom';
 
-const CardVideo = ({ id, title, description, videoLink, theme }) => {
+const CardVideo = ({ id, title, description, videoLink, theme, to, refresh }) => {
   const history = useHistory();
 
   const routeChange = () => {
-    console.log(id);
-    const path = `/${id}`;
-    
+    let path = `/${id}`;
+    if(to === 'favorites') {
+      path = `/favorites/${id}`;
+    }
+
     history.push(path);
   }
   

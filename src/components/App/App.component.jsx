@@ -6,6 +6,8 @@ import HomePage from '../../pages/Home';
 import LoginPage from '../../pages/Login';
 import NotFound from '../../pages/NotFound';
 import SecretPage from '../../pages/Secret';
+import FavoritePage from '../../pages/Favorite';
+import FavoriteVideoPage from '../../pages/FavoriteVideo';
 import VideoPage from '../../pages/Video';
 import Private from '../Private';
 import Fortune from '../Fortune';
@@ -28,9 +30,9 @@ function App() {
   return (
     
     <BrowserRouter>   
-    <Header />
-   
-    <AuthProvider>     
+    
+    <AuthProvider>   
+      <Header />  
         <Layout>        
           <Switch>
             <Route exact path="/">
@@ -39,12 +41,19 @@ function App() {
             <Route exact path="/login">
               <LoginPage />
             </Route>
+            <Private exact path="/favorites">
+              <FavoritePage theme={themeReducer.mode} />
+            </Private>
+            <Private exact path="/favorites/:id">
+              <FavoriteVideoPage theme={themeReducer.mode} />
+            </Private>
             <Route path="/:id">
               <VideoPage />
             </Route>
             <Private exact path="/secret">
               <SecretPage />
             </Private>
+            
             <Route path="*">
               <NotFound />
             </Route>
