@@ -14,6 +14,11 @@ const CardVideo = ({ id, title, description, videoLink }) => {
   
   return (
     <div className="card-item" onClick={routeChange}>     
+
+function CardVideo({ title, description, videoLink }) {
+  return (
+    <div className="card-item">
+      
       <img
         src={videoLink}
         alt={title}

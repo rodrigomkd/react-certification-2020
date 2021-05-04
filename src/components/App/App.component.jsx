@@ -36,11 +36,17 @@ function App() {
   }, []);
 
   return (
+
     <Provider store={store}>
     <BrowserRouter>   
     <Header />
    
     <AuthProvider>     
+
+    <BrowserRouter>
+    <Header />
+      <AuthProvider>   
+
         <Layout>        
           <Switch>
             <Route exact path="/">

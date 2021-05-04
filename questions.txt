@@ -1,0 +1,9 @@
+Q: Using create-react-app, what do we need to set up for testing?
+
+A: Install react-testing-library and jest-dom library for improved assertions.
+
+Q: What components are worth to test in your development?
+Every component is worth testing to some degree, even if the test is simple. This gives you confidence that the component works as expected.
+
+Q: Can you apply TDD once you already created components?
+Yes, TDD is possible, but sometimes the code needs to be refactor.
